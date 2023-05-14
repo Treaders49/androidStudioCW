@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <Button
+        android:id="@+id/button_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logoutButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/createWorkoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Create a workout"
+        app:layout_constraintBottom_toTopOf="@+id/viewPreviousWorkoutButton"
+        app:layout_constraintEnd_toEndOf="@+id/viewPreviousWorkoutButton"
+        app:layout_constraintStart_toStartOf="@+id/viewPreviousWorkoutButton" />
+
+    <Button
+        android:id="@+id/viewPreviousWorkoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="View previous workouts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tutorialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Tutorial"
+        app:layout_constraintEnd_toEndOf="@+id/viewPreviousWorkoutButton"
+        app:layout_constraintStart_toStartOf="@+id/viewPreviousWorkoutButton"
+        app:layout_constraintTop_toBottomOf="@+id/viewPreviousWorkoutButton" />
+
+    <Button
+        android:id="@+id/moreInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="More Gym Information"
+        app:layout_constraintEnd_toEndOf="@+id/tutorialButton"
+        app:layout_constraintStart_toStartOf="@+id/tutorialButton"
+        app:layout_constraintTop_toBottomOf="@+id/tutorialButton" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="233dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/img"
+        app:layout_constraintBottom_toTopOf="@+id/createWorkoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/moreInfoButton"
+        app:layout_constraintStart_toStartOf="@+id/moreInfoButton"
+        app:layout_constraintTop_toBottomOf="@+id/moreInfoButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

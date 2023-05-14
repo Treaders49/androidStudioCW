@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/exerciseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/exerciseView"
+        android:layout_width="wrap_content"
+        android:layout_height="231dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/exerciseNameTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Exercise Name"
+        app:layout_constraintStart_toStartOf="@+id/exerciseView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/exerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/exerciseNameTag"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseNameTag" />
+
+    <TextView
+        android:id="@+id/repLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reps"
+        app:layout_constraintStart_toStartOf="@+id/setView"
+        app:layout_constraintTop_toTopOf="@+id/setView" />
+
+    <TextView
+        android:id="@+id/weightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="weight(KG)"
+        app:layout_constraintBottom_toBottomOf="@+id/repLabel"
+        app:layout_constraintStart_toEndOf="@+id/repLabel" />
+
+    <EditText
+        android:id="@+id/repText"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/repLabel"
+        app:layout_constraintTop_toBottomOf="@+id/repLabel" />
+
+    <EditText
+        android:id="@+id/weightText"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/weightLabel"
+        app:layout_constraintTop_toBottomOf="@+id/weightLabel" />
+
+    <Button
+        android:id="@+id/AddSetButton"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:text="Add Set"
+        app:layout_constraintStart_toStartOf="@+id/setView"
+        app:layout_constraintTop_toBottomOf="@+id/setView" />
+
+    <TextView
+        android:id="@+id/noteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="notes"
+        app:layout_constraintBottom_toTopOf="@+id/weightText"
+        app:layout_constraintStart_toEndOf="@+id/weightLabel" />
+
+    <EditText
+        android:id="@+id/noteText"
+        android:layout_width="152dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/noteLabel"
+        app:layout_constraintTop_toBottomOf="@+id/noteLabel" />
+
+    <View
+        android:id="@+id/setView"
+        android:layout_width="325dp"
+        android:layout_height="75dp"
+        app:layout_constraintStart_toStartOf="@+id/exerciseName"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

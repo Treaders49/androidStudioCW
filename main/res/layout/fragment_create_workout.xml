@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createWorkoutFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/exerciseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/cancelWorkoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel workout"
+
+            app:layout_constraintEnd_toEndOf="@+id/finishWorkoutButton"
+            app:layout_constraintStart_toStartOf="@+id/finishWorkoutButton"
+            app:layout_constraintTop_toBottomOf="@+id/finishWorkoutButton" />
+
+        <Button
+            android:id="@+id/finishWorkoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Finish Workout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addExerciseButton"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="130dp"
+            android:onClick="addSet"
+            android:text="Add Exercise"
+            app:layout_constraintEnd_toEndOf="@+id/finishWorkoutButton"
+            app:layout_constraintStart_toStartOf="@+id/finishWorkoutButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="00:00:00"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/workoutLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Workout Name"
+            app:layout_constraintStart_toStartOf="@+id/timerView"
+            app:layout_constraintTop_toBottomOf="@+id/timerView" />
+
+        <EditText
+            android:id="@+id/workoutName"
+            android:layout_width="108dp"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/workoutLabel"
+            app:layout_constraintTop_toBottomOf="@+id/workoutLabel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
